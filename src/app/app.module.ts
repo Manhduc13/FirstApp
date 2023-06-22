@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HousingLocationComponent } from './housing-location/housing-location.component';
@@ -12,6 +12,7 @@ import { HousingLocationComponent } from './housing-location/housing-location.co
     HousingLocationComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule
   ],
   providers: [],
