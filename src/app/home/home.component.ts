@@ -10,7 +10,7 @@ import { Housinglocation } from '../interface/housinglocation';
     </form>
   </section>
   <section class="results">
-    <app-housing-location></app-housing-location>
+    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
   </section>
   `,
   styleUrls: ['./home.component.css']
