@@ -18,10 +18,10 @@ import { Housinglocation } from '../interface/housinglocation';
 export class HomeComponent {
   housingLocation: Housinglocation = {
   id: 9999,
-  name: 'Test Home',
-  city: 'Test city',
+  name: 'Luxury Home',
+  city: 'Modern city',
   state: 'ST',
-  photo: 'assets/example-house.jpg',
+  photo: 'assets/LuxuryHouse.png',
   availableUnits: 99,
   wifi: true,
   laundry: false,
