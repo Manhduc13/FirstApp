@@ -10,20 +10,56 @@ import { Housinglocation } from '../interface/housinglocation';
     </form>
   </section>
   <section class="results">
-    <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+    <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation"></app-housing-location>
   </section>
   `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  housingLocation: Housinglocation = {
-  id: 9999,
-  name: 'Luxury Home',
-  city: 'Modern city',
-  state: 'ST',
-  photo: 'assets/LuxuryHouse.png',
-  availableUnits: 99,
-  wifi: true,
-  laundry: false,
-  };
+  housingLocationList: Housinglocation[] = [
+    {
+    id: 0,
+    name: 'Villa 1',
+    city: 'Modern City',
+    state: 'ST',
+    photo: 'assets/Villa1.png',
+    availableUnits: 8,
+    wifi: true,
+    laundry: false,
+    price: 10000000000
+  },
+  {
+    id: 1,
+    name: 'Villa 2',
+    city: 'Modern City',
+    state: 'ST',
+    photo: 'assets/Villa2.png',
+    availableUnits: 8,
+    wifi: true,
+    laundry: false,
+    price: 10000000000
+  },
+  {
+    id: 2,
+    name: 'Villa 3',
+    city: 'Modern City',
+    state: 'ST',
+    photo: 'assets/Villa3.png',
+    availableUnits: 8,
+    wifi: true,
+    laundry: false,
+    price: 10000000000
+  },
+  {
+    id: 3,
+    name: 'Villa 3',
+    city: 'Modern City',
+    state: 'ST',
+    photo: 'assets/Villa4.png',
+    availableUnits: 8,
+    wifi: true,
+    laundry: false,
+    price: 10000000000
+  }
+  ];
 }
