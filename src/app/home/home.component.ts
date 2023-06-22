@@ -9,7 +9,10 @@ import { Component } from '@angular/core';
       <button class="primary" type="button">Search</button>
     </form>
   </section>
-`,
+  <section class="results">
+    <app-housing-location></app-housing-location>
+  </section>
+  `,
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
