@@ -7,6 +7,7 @@ import { HousingLocationComponent } from './housing-location/housing-location.co
 import { DetailsComponent } from './details/details.component';
 import { RouterModule } from '@angular/router';
 import routeConfig from './routes';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import routeConfig from './routes';
   imports: [
     CommonModule,
     BrowserModule,
-    RouterModule.forRoot(routeConfig)
+    RouterModule.forRoot(routeConfig),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
