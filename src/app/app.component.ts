@@ -19,3 +19,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'homes';
 }
+// json-server --watch db.json
+// ng serve --open

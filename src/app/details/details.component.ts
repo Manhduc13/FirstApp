@@ -6,7 +6,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
-  
   template: `
   <article>
     <img class="listing-photo" [src]="housingLocation?.photo"
@@ -29,20 +28,18 @@ import { FormControl, FormGroup } from '@angular/forms';
       <section class="listing-apply">
         <h2 class="section-heading">Apply now to live here</h2>
         <form [formGroup]="applyForm" (submit)="submitApplication()">
-          <label for="first-name">First Name</label>
-          <input id="first-name" type="text" formControlName="firstName" >
-
-          <label for="last-name">Last Name</label>
-          <input id="last-name" type="text" formControlName="lastName" >
-
-          <label for="email">Email</label>
-          <input id="email" type="email" formControlName="email" placeholder="abc@gmail.com" >
+          <label for="first-name">First Name<input id="first-name" type="text" formControlName="firstName" placeholder="For example: Nguyen Duc"required></label>       
+      
+          <label for="last-name">Last Name<input id="last-name" type="text" formControlName="lastName" placeholder="For example: Manh"required></label>
+        
+          <label for="email">Email<input id="email" type="email" formControlName="email" placeholder="For example: abc@gmail.com" required></label>
+          
           <button type="submit" class="primary">Apply now</button>
         </form>
       </section>
     </div>
   </article>
-`,
+  `,
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
@@ -59,7 +56,7 @@ export class DetailsComponent {
     constructor() {
       const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
       
-      console.log(this.housingService.getHousingLocationById(housingLocationId));
+      //console.log(this.housingService.getHousingLocationById(housingLocationId));
       
       this.housingService.getHousingLocationById(housingLocationId).then((housingLocation) => {
         this.housingLocation = housingLocation;
